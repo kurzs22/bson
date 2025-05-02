@@ -1,0 +1,25 @@
+[
+  {
+    $match:
+    /**
+     * query: The query in MQL.
+     */
+    {
+      startTime: {
+        $gt: ISODate("2025-04-30")
+      }
+    }
+  },
+  {
+    $project:
+    /**
+     * specifications: The fields to
+     *   include or exclude.
+     */
+    {
+      hostname: 1,
+      startTime: 1,
+      pid: 1
+    }
+  }
+]
