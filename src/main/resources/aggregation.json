@@ -17,9 +17,26 @@
      *   include or exclude.
      */
     {
-      hostname: 1,
       startTime: 1,
+      hostname: 1,
       pid: 1
+    }
+  },
+  {
+    $out:
+    /**
+     * Provide the name of the output database and collection.
+     */
+    {
+      db: "aggregates",
+      coll: "pool"
+      /*
+  timeseries: {
+  timeField: 'field',
+  bucketMaxSpanSeconds: 'number',
+  granularity: 'granularity'
+  }
+  */
     }
   }
 ]
